@@ -1,8 +1,8 @@
-#!/usr/bin/env ruby.exe
+#!/usr/bin/env ruby
 require "fileutils"
 
 APP_ROOT = File.expand_path("..", __dir__)
-APP_NAME = "market-place-api"
+APP_NAME = "app"
 
 def system!(*args)
   system(*args, exception: true)
