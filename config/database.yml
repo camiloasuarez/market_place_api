@@ -1,10 +1,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: db
+  pool: 5
   username: postgres
   password: password
-  pool: 5
+  host: db
 
 development:
   <<: *default
@@ -17,5 +17,5 @@ test:
 production:
   <<: *default
   database: market_place_api_production
-  username: market_place_api
-  password: <%= ENV['MARKET_PLACE_API_DATABASE_PASSWORD'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
